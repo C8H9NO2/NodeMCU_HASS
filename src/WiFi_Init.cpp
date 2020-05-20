@@ -12,6 +12,7 @@ IPAddress server{192, 168, 1, 14};
 void WiFi_Init::Init_WiFi(const char *ssid, const char *password) {
     Serial.print("Connect to ");
     Serial.println(ssid);
+    WiFi.mode(WIFI_STA);
     WiFi.begin(ssid, password);
     delay(50);
     while (WiFi.status() != WL_CONNECTED) {
