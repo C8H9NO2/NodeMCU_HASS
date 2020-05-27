@@ -32,7 +32,7 @@ sensor:
     name: "Light(Lux)"
     icon: mdi:ceiling-light
     state_topic: "sensor/bedroom"
-    unit_of_measurement: 'lm'
+    unit_of_measurement: 'lux'
     value_template: "{{ value_json.Lux }}"
   - platform: mqtt
     name: "Signal"
