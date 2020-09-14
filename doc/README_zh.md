@@ -1,14 +1,14 @@
-# NodeMcuHass
-A simple mqtt remote and sensor
-[中文简介](https://github.com/C8H9NO2/NodeMCU_HASS/tree/master/doc/README_zh.md) 
-ESP8266+MAX44009+BME280
+NodeMCU_HASS
+=====
+## 使用NodeMcu的简易工具
+>使用了BME280和MAX44009和红外管实现的简易遥控  
+**项目属于个人自用，仅供参考，不保证能否运行**
 
-And simple IRLED to remote TCL AirCondition
+![NodeMcu](https://github.com/C8H9NO2/NodeMCU_HASS/blob/master/doc/nodemcu.jpg)
 
-Use [Adafruit_BME280_Library](https://github.com/adafruit/Adafruit_BME280_Library) [ArduinoJson](https://github.com/bblanchon/ArduinoJson) [MAX44009](https://github.com/dantudose/MAX44009) [IRremoteESP8266](https://github.com/crankyoldgit/IRremoteESP8266) [pubsubclient](https://github.com/knolleary/pubsubclient)
-
-HASS configuration.yaml add this
-```yaml
+### 关于HASS的配置
+在HASS的configuration.yaml中添加如下内容
+```
 sensor:
   - platform: mqtt
     name: "Temperature"
@@ -62,4 +62,3 @@ climate:
    max_temp: 30
    temp_step: 1
    retain: false
-```
